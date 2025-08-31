@@ -4,7 +4,221 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Youtube Clone</title>
   </head>
-  <body></body>
+  <body>
+    <header class="topbar" role="banner">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">▶</div>
+        <div class="brand__text">Youtube</div>
+      </div>
+
+      <form
+        class="search"
+        role="search"
+        aria-label="Pesquisar vídeos"
+        onsubmit="return false"
+      >
+        <label class="sr-only" for="q">Pesquisar</label>
+        <input id="q" type="search" placeholder="Pesquisar" />
+        <button aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <div class="actions" aria-label="Ações">
+        <button
+          aria-label="Upload"
+          title="Upload"
+          style="
+            background: none;
+            border: 0;
+            color: var(--text);
+            font-size: 20px;
+          "
+        >
+          <i class="fa-solid fa-upload"></i>
+        </button>
+        <button
+          aria-label="Notificações"
+          title="Notificações"
+          style="
+            background: none;
+            border: 0;
+            color: var(--text);
+            font-size: 20px;
+          "
+        >
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <div class="avatar" title="Sua conta">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" role="navigation" aria-label="Principal">
+        <div class="nav-group">
+          <div class="nav-title">Principal</div>
+          <nav class="nav">
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Início</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Shorts</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Inscrições</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Biblioteca</span></a
+            >
+          </nav>
+        </div>
+        <div class="nav-group">
+          <div class="nav-title">Explorar</div>
+          <nav class="nav">
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Música</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Esportes</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Jogos</span></a
+            >
+            <a href="#"
+              ><div class="dot"></div>
+              <span>Notícias</span></a
+            >
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content" role="main">
+        <section class="banner" aria-label="Banner">
+          <div class="label">
+            <img src="./assets/banner.png" alt="" />
+          </div>
+        </section>
+
+        <div class="chips" role="list" aria-label="Categorias">
+          <button class="chip active">Tudo</button>
+          <button class="chip">Música</button>
+          <button class="chip">Programação</button>
+          <button class="chip">Esportes</button>
+          <button class="chip">Comédia</button>
+          <button class="chip">Tecnologia</button>
+        </div>
+
+        <section class="grid" aria-label="Lista de vídeos">
+          <article class="card">
+            <a
+              class="thumb has-image"
+              href="#"
+              style="--thumb-img: url('assets/thumb1.png')"
+              aria-label="Abrir vídeo"
+            >
+              <span>Thumbnail (16:9)</span>
+              <div class="duration">12:34</div>
+            </a>
+            <div class="meta">
+              <div class="avatar--channel">Logo</div>
+              <div>
+                <h3 class="title">
+                  10 coisas inacreditáveis que realmente aconteceram
+                </h3>
+                <div class="channel">Você Não Sabia!</div>
+                <div class="stats">123 mil visualizações • há 3 dias</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a
+              class="thumb has-image"
+              href="#"
+              style="--thumb-img: url('assets/thumb2.png')"
+            >
+              <span>Thumbnail (16:9)</span>
+              <div class="duration">08:21</div>
+            </a>
+            <div class="meta">
+              <div class="avatar--channel">Logo</div>
+              <div>
+                <h3 class="title">
+                  Enfrentando o CHEFÃO mais difícil de todos os tempos
+                </h3>
+                <div class="channel">Field Games</div>
+                <div class="stats">2,4 mi de visualizações • há 1 mês</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a
+              class="thumb has-image"
+              href="#"
+              style="--thumb-img: url('assets/thumb3.png')"
+            >
+              <span>Thumbnail (16:9)</span>
+              <div class="duration">24:07</div>
+            </a>
+            <div class="meta">
+              <div class="avatar--channel">Logo</div>
+              <div>
+                <h3 class="title">
+                  Última resistência: será que conseguimos sobreviver?
+                </h3>
+                <div class="channel">Sobrevivente Z</div>
+                <div class="stats">56 mil visualizações • há 2 semanas</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a
+              class="thumb has-image"
+              href="#"
+              style="--thumb-img: url('assets/thumb4.png')"
+            >
+              <span>Thumbnail (16:9)</span>
+              <div class="duration">03:59</div>
+            </a>
+            <div class="meta">
+              <div class="avatar--channel">Logo</div>
+              <div>
+                <h3 class="title">
+                  O carro mais rápido que já testei na vida!
+                </h3>
+                <div class="channel">Speed Racer</div>
+                <div class="stats">987 mil visualizações • há 6 dias</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <footer
+          style="margin-top: var(--sp-6); color: var(--muted); font-size: 13px"
+        >
+          <p>© 2025 • Este é um projeto de estudo (clone de interface).</p>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
